@@ -8,7 +8,7 @@ const WeatherButton = ({ cities, handleCityChange, selectedCity }) => {
       <Button
         variant='warning'
         onClick={() => handleCityChange('current')}
-        className={selectedCity === null ? 'active' : ''}
+        className={`btn ${selectedCity === null ? 'active' : ''}`}
       >
         Current Location
       </Button>
@@ -17,7 +17,7 @@ const WeatherButton = ({ cities, handleCityChange, selectedCity }) => {
           key={index}
           variant='warning'
           onClick={() => handleCityChange(item)}
-          className={selectedCity === item ? 'active' : ''}
+          className={`btn ${selectedCity === item ? 'active' : ''}`}
         >
           {item}
         </Button>
